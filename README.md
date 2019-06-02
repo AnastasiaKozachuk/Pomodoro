@@ -5,7 +5,7 @@
 3. React/JavaScript - для написання frontend частини застосування.
 4. Maven - інструмент для зручного менеджменту залежностей в серверній частині застосування.
 
-Для того щоб налаштувати середовище проекту вам необхідно:
+Для того щоб налаштувати середовище проекту необхідно:
 
 1. Завантажити та встановити [InteliJIdea](https://www.jetbrains.com/idea/download/#section=windows)/[Eclipse](https://www.eclipse.org/downloads/).
 2. Завантажити та встановити [Java Jdk](https://www.azul.com/downloads/zulu/) версію 8 або вище.
