@@ -1,0 +1,19 @@
+.ErrorMessage_container{
+    padding: 150px 20px 20px 20px;
+    text-align: center;
+    background-color:white;
+}
+
+.Puzzled{
+    width: 200px;
+}
+
+.ErrorMessage_title{
+    color: #433f3c;
+}
+
+@media(max-width: 555px){
+    .ErrorMessage_container{
+        padding: 230px 20px 20px 20px;
+    }
+}
