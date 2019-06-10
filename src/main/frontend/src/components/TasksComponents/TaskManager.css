@@ -31,3 +31,15 @@
     align-items: center;
     justify-content: center;
 }
+.TaskManager_title{
+    color: white;
+}
+
+.TaskManager_button{
+    background-color: #98dd7f;
+    color: white;
+    text-align: center;
+    width: 300px;
+    padding: 10px;
+    margin: 1px;
+}

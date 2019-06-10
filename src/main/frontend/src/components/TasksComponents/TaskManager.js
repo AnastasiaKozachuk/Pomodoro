@@ -21,7 +21,7 @@ class TaskManager extends Component {
         //test data
         let tasks = [
             {
-                active: "Active",
+                active: "",
                 title: "My Title 1",
                 description: "Description",
                 isStarted:"Yes",
@@ -73,6 +73,7 @@ class TaskManager extends Component {
         return (
             <div className="TaskManager_container">
                 <div className="TaskManager_create_container">
+                    <h1 className="TaskManager_title">Create Task</h1>
                     <div>
                         <input className="Signin-form_input"
                                onChange={(evt) => this.updateNameValue(evt)}
@@ -85,6 +86,7 @@ class TaskManager extends Component {
                                type="textarea"
                                placeholder="Description"/>
                     </div>
+                    <div className="TaskManager_button">CREATE</div>
                 </div>
                 <div className="Tasks_container">
                     {this.createTaskItems()}
