@@ -1,7 +1,7 @@
 .title{
     text-align: center;
     text-transform: uppercase;
-    font-size: 50px;
+    font-size: 40px;
     margin-top: 50px;
     margin-bottom: 30px;
 }
@@ -14,14 +14,13 @@
     display: inline;
     background-color: white;
     text-decoration: none;
-    border: 3px solid coral;
+    border: 3px solid #f74f2b;
     padding: 10px 25px;
-    font-size: 30px;
     min-width: 150px;
 }
 
-.default-button:active{
-    background-color:blanchedalmond;
+.default-button:hover{
+    background-color: #f74f2b;
 }
 
 .set-button{
@@ -29,13 +28,12 @@
     margin: 5px;
     display: inline;
     color: white;
-    background-color: coral;
+    background-color: #f74f2b;
     text-decoration: none;
-    border: 3px solid coral;
+    border: 3px solid #f74f2b;
     padding: 10px 25px;
-    font-size: 30px;
 }
 
-.set-button:active{
-    background-color:orange;
+.set-button:hover{
+    background-color: #bf3b20;
 }

@@ -21,7 +21,17 @@ class LoginService {
         });
     }
 
+    createAccount(data){
+        return axios.post("http://localhost:8080/registration/createEmployer", {
+            "login": data.login,
+            "firstName": data.firstName,
+            "secondName": data.lastName,
+            "password": "{noop}" + data.password,
+            "email": data.email
+        });
+    }
 
+    //delete next two if we dont need roles
     createEmployer(data){
         return axios.post("http://localhost:8080/registration/createEmployer", {
             "employerLoginEmail": data.loginEmail,

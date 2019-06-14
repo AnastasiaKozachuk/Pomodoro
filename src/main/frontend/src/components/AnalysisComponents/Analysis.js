@@ -33,11 +33,12 @@ export default class Analysis extends Component {
     render() {
 
         return (
-            <div className="container">
+            <div className="analysis-container">
                 <div className="table-background">
                     <div className="title-analysis">Analysis</div>
                 </div>
-                <div className="sub-title">Done tasks :</div>
+                <div className="table-container">
+                <div className="sub-title">Done tasks :</div>  
                 <table>
                     <tbody>
                     <tr>
@@ -47,6 +48,7 @@ export default class Analysis extends Component {
                     {this.renderTable()}
                     </tbody>
                 </table>
+                </div>
             </div>
         );
     }

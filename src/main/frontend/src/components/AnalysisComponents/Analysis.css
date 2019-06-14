@@ -1,10 +1,7 @@
-*{
-    margin: 0;
-}
-
 .table-background{
-    background-color: coral;
+    background-color: #f74f2b;
     text-align: center;
+    width: 100%;
 }
 
 .title-analysis{
@@ -14,6 +11,12 @@
     color : white;
     padding-top: 50px;
     padding-bottom: 30px;
+}
+
+.table-container{
+    position: relative;
+    width: 100%;
+
 }
 
 .sub-title{
@@ -35,5 +38,5 @@ td {
 }
 
 .td-totaltime{
-    color: coral;
+    color: #f74f2b;
 }

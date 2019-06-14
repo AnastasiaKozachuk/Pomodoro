@@ -10,6 +10,7 @@ import TaskManager from './components/TasksComponents/TaskManager'
 import Analysis from './components/AnalysisComponents/Analysis'
 import TimerSettings from './components/TimerComponents/TimerSettings'
 import Header from "./components/Headers/header";
+import RegisterForm from './components/RegisterComponent/RegisterForm'
 
 
 class App extends Component {
@@ -28,6 +29,7 @@ class App extends Component {
                 <Route path="/dashboard/manage-tasks" component={TaskManager}/>
                 <Route path="/dashboard/pomodoro" component={WorkProcess}/>
                 <Route path="/dashboard/analysis" component={Analysis}/>
+                <Route path="/createAccount" component={RegisterForm}/>
             </Router>
         );
     }

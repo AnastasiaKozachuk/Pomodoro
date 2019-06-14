@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import axios from 'axios';
 import './TimerSettings.css';
 
 
@@ -6,10 +7,10 @@ import SettingsElement from './SettingsElement'
 
 export default class Settings extends Component {
 
-    duration = 25;
-    break_duration = 5;
-    set_size = 4;
-    set_break_duration = 30;
+    duration_default = 25;
+    break_duration_default = 5;
+    set_size_default = 4;
+    set_break_duration_default = 30;
 
 
 
@@ -21,26 +22,72 @@ export default class Settings extends Component {
         this.set_break_duration_ref = React.createRef();
     }
 
+    state = {
+        duration : this.duration_default,
+        break_duration : this.break_duration_default,
+        set_size : this.set_size_default,
+        set_break_duration : this.set_break_duration_default
+    }
+
+    onUpdateDuration = (val) => {       
+            this.setState({
+                duration: val
+            })
+          };
+
+    onUpdateBreakDuration = (val) => {       
+            this.setState({
+                break_duration: val
+            })
+          };
+
+    onUpdateSetSize = (val) => {       
+            this.setState({
+                set_size: val
+            })
+          };
+
+    onUpdateSetBreakDuration = (val) => {       
+            this.setState({
+                set_break_duration: val
+            })
+          };
+
     onClick = (event) => {
-        this.duration_ref.current.SetDefault(this.duration);
-        this.break_duration_ref.current.SetDefault(this.break_duration);
-        this.set_size_ref.current.SetDefault(this.set_size);
-        this.set_break_duration_ref.current.SetDefault(this.set_break_duration);
+        this.duration_ref.current.SetDefault(this.duration_default);
+        this.break_duration_ref.current.SetDefault(this.break_duration_default);
+        this.set_size_ref.current.SetDefault(this.set_size_default);
+        this.set_break_duration_ref.current.SetDefault(this.set_break_duration_default);
 
     }
+
+    setEvent = () => {
+
+        let data = JSON.stringify({
+            duration:  this.state.duration,
+            break_duration: this.state.break_duration,
+            set_size:  this.state.set_size,
+            set_break_duration: this.state.set_break_duration
+        })
+    
+        //add path here
+        axios.post("http://localhost:8080/timer_settings", data).then(() => {
+                console.log("Successfully set");
+            });
+    };
 
     render() {
 
         return (
             <div className="container">
                 <div className="title">Timer Settings</div>
-                <SettingsElement ref={this.duration_ref}  labelName={"Pomodoro duration"} label={this.duration}/>
-                <SettingsElement ref={this.break_duration_ref} labelName={"Pomodoro break duration"} label={this.break_duration}/>
-                <SettingsElement ref={this.set_size_ref} labelName={"Pomodoro set size"} label={this.set_size}/>
-                <SettingsElement ref={this.set_break_duration_ref} labelName={"Pomodoro set break duration"} label={this.set_break_duration}/>
+                <SettingsElement onUpdate={this.onUpdateDuration} ref={this.duration_ref}  labelName={"Pomodoro duration"} label={this.duration_default}/>
+                <SettingsElement onUpdate={this.onUpdateBreakDuration} ref={this.break_duration_ref} labelName={"Pomodoro break duration"} label={this.break_duration_default}/>
+                <SettingsElement onUpdate={this.onUpdateSetSize} ref={this.set_size_ref} labelName={"Pomodoro set size"} label={this.set_size_default}/>
+                <SettingsElement onUpdate={this.onUpdateSetBreakDuration}ref={this.set_break_duration_ref} labelName={"Pomodoro set break duration"} label={this.set_break_duration_default}/>
                 <div className="buttons-container">
                     <button className="default-button" onClick={this.onClick}> Default </button>
-                    <button className="set-button" /* TODO: onClick={sent to server}*/> Set </button>
+                    <button className="set-button" onClick={this.setEvent}> Set </button>
                 </div>
             </div>
         );
