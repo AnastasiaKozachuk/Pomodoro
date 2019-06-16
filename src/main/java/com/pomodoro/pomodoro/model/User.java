@@ -1,7 +1,9 @@
 package com.pomodoro.pomodoro.model;
 
+import com.pomodoro.pomodoro.domain.Role;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.Transient;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Data
@@ -15,6 +17,8 @@ public class User {
     private String firstName;
     private String secondName;
 
+    @Transient
+    private Role role = Role.USER;
     //timer
 
     private Integer timeOfPomidor; //minutes - default 25m

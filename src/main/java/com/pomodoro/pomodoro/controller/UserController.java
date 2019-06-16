@@ -16,13 +16,13 @@ public class UserController {
     private UserService userService;
 
 
-    @PostMapping(value = "saveUser")
+    @PostMapping(value = "/registration")
     public void saveUser(@RequestBody User user) {
         userService.saveUser(user);
     }
 
 
-    @PostMapping(value = "updateUser")
+    @PostMapping(value = "/updateUser")
     public void updateUser(@RequestBody User user) {
         userService.updateUser(user);
     }
@@ -34,7 +34,7 @@ public class UserController {
     }
 
     @GetMapping(value = "/findAll")
-    public List<User> findByLoginAndPassword() {
+    public List<User> findAllUsers() {
         return userService.findAllUsers();
     }
 
