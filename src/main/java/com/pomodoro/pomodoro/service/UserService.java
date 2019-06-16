@@ -8,7 +8,7 @@ import java.util.Optional;
 
 public interface UserService {
 
-    void saveUser(User user);
+    User saveUser(User user);
     void updateUser(User user);
     User findByLoginAndPassword(String login, String password);
     List<User> findAllUsers();

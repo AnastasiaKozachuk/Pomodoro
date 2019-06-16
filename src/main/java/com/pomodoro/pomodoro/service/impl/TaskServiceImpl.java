@@ -38,6 +38,11 @@ public class TaskServiceImpl implements TaskService {
     }
 
     @Override
+    public List<Task> getAllPausedTasks(String userId) {
+        return taskRepository.getAllPausedTasks(userId);
+    }
+
+    @Override
     public void saveTimeSpentForWork(ObjectId id, Integer time) {
         Task task;
 
@@ -50,8 +55,8 @@ public class TaskServiceImpl implements TaskService {
     }
 
     @Override
-    public void saveTask(Task task) {
-        taskRepository.save(task);
+    public Task saveTask(Task task) {
+        return taskRepository.save(task);
     }
 
     @Override

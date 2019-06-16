@@ -21,6 +21,11 @@ public class TaskController {
         return taskService.getAllCompletedTasks(userId);
     }
 
+    @GetMapping("/pausedTasks")
+    public List<Task> getAllPausedTasks(@RequestParam String userId) {
+        return taskService.getAllPausedTasks(userId);
+    }
+
     @GetMapping("/uncompletedTasks")
     public List<Task> getAllUncompletedTasks(@RequestParam String userId) {
         return taskService.getAllUncompletedTasks(userId);
@@ -43,8 +48,8 @@ public class TaskController {
 
 
     @PostMapping("/saveTask")
-    public void saveTask(@RequestBody Task task) {
-        taskService.saveTask(task);
+    public String saveTask(@RequestBody Task task) {
+        return taskService.saveTask(task).get_id().toString();
     }
 
 

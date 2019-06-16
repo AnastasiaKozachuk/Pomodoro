@@ -22,5 +22,8 @@ public interface TaskRepository extends MongoRepository<Task, ObjectId> {
     @Query("{ 'userLogin' : ?0,  'isStarted' : true, 'isFinished':false }")
     List<Task> getAllStartedAndUncompletedTasks(String userId);
 
+    @Query("{ 'userLogin' : ?0,  'isPaused' : true }")
+    List<Task> getAllPausedTasks(String userId);
+
     List<Task> findAllByUserLogin(String userLogin);
 }

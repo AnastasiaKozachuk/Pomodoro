@@ -12,8 +12,9 @@ public interface TaskService {
     List<Task> getAllUncompletedTasks(String userId);
     List<Task> getAllNotStartedTasks(String userId);
     List<Task> getAllStartedAndUncompletedTasks(String userId);
+    List<Task> getAllPausedTasks(String userId);
     void saveTimeSpentForWork(ObjectId id, Integer time);
-    void saveTask(Task task);
+    Task saveTask(Task task);
     void deleteTask(ObjectId id);
     void updateTask(Task task);
     List<Task> getAllByUserId(String userId);

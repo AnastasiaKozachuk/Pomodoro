@@ -41,7 +41,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.authorizeRequests()
                 .antMatchers(HttpMethod.OPTIONS,"/**").permitAll()
                 .antMatchers("/auth/signIn").permitAll()
-                .antMatchers("/registration").permitAll()
+                .antMatchers("/user/registration").permitAll()
                 .antMatchers("/**").authenticated()
                 .and()
                 .apply(new JwtConfigurer(jwtTokenProvider));
