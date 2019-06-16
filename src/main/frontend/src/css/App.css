@@ -1,0 +1,129 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 20vmin;
+  pointer-events: none;
+  margin-bottom: 5px;
+}
+
+.App-body h1,.App-body p,.App-body h5{
+    color: #292422;
+}
+
+.App-body h3, .App-body h2{
+    color: #ff7e19;
+}
+
+.App-header {
+  background-color: #433f3c;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+}
+
+.App-footer{
+    background-color: #433f3c;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.description{
+    height: 100px;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.App-body{
+    padding-top: 50px;
+}
+
+.button-rectangle{
+    background-color: orange;
+    color: #eceaff;
+    border: 1px solid orange;
+    padding: 20px;
+    width: 300px;
+    margin-top: 50px;
+}
+
+.button-next{
+  background-color: orange;
+  color: #433f3c;
+  border: 1px solid orange;
+  border-radius: 5vmin;
+  padding: 2vmin;
+  width: 10vmin;
+  height: 10vmin;
+  animation: float infinite 2s ease alternate;
+}
+
+.App-header .button-next:hover{
+  background-color: #fffc82;
+  border: 1px solid rgb(255, 252, 130);
+}
+
+.App-section .button-next{
+    color: #eceaff;
+}
+
+.App-section .button-next:hover, .button-rectangle:hover{
+    background-color: #cb6617;
+    border: 1px solid rgb(203, 102, 23);
+}
+
+.column-box{
+    margin-bottom: 100px;
+}
+
+/* The spinning effect */
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* The floating effect */
+@keyframes float {
+    from {
+        transform: translateY(-10px);
+    }
+    to {
+        transform: translateY(10px);
+    }
+}
+
+/* The fading effect */
+@keyframes App-logo-fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
