@@ -10,7 +10,7 @@ export default class AnalysisTableElement extends Component {
     };
     
     renderTable = () => {
-        if(Array.isArray(this.setState)){
+        if(Array.isArray(this.state.analysisData)){
         return this.state.analysisData.map(value => {
             return (
                 <tr key={value.taskTitle}>
