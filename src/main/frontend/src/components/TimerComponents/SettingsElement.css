@@ -1,7 +1,7 @@
 .settings-body{
     margin: 40px;
     text-align: center;
-    font-size:30px;
+    /*font-size:20px;*/
 }
 
 .label-name{
@@ -14,6 +14,6 @@
 .settings-input{
     border: none;
     width: 80px;
-    font-size:30px;
+    /*font-size:20px;*/
     color: coral;
 }

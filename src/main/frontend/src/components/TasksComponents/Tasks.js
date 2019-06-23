@@ -5,16 +5,31 @@ import './Tasks.css';
 class Tasks extends Component {
 
 
-    state = {
+    constructor(props) {
+        super(props);
 
-    };
+        this.state = {
+
+        };
+
+        this.activateTask = this.activateTask.bind(this);
+        this.markDone = this.markDone.bind(this);
+    }
 
 
     componentDidMount() {
     }
 
-    getTimerInfo = () => {};
+    activateTask = (event) =>{
+        let parent = event.target.parentElement.parentElement;
+        let parentClassList = parent.classList;
+        (parentClassList.contains('Active'))?parent.classList.remove('Active'):parent.classList.add('Active');
+    };
 
+    markDone = (event) =>{
+        console.log("Done");
+        event.target.parentElement.parentElement.style.display = "none";
+    };
 
     render() {
 
@@ -26,8 +41,14 @@ class Tasks extends Component {
                     {this.props.title}
                 </div>
                 <div className="Task_tools">
-                    <div className="Task_button-tool">Activate</div>
-                    <div className="Task_button-tool">Done</div>
+                    <button className="Task_button-tool"
+                            onClick={this.activateTask}>
+                        Activate
+                    </button>
+                    <button className="Task_button-tool"
+                            onClick={this.markDone}>
+                        Done
+                    </button>
                 </div>
                 <div className="Task_time-spent">
                     {this.props.performanceTime}

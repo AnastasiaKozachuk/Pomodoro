@@ -1,23 +1,24 @@
 .Timer_container-info{
+    position: absolute;
+    top: 84px;
+    left: 0;
     display: flex;
     width: 100%;
-    height: 50%;
-    padding: 20px;
     flex-direction: row;
+    background-color: #98dd7f;
     align-items: center;
-    justify-content: space-around;
-    font-size: calc(5px + 2vmin);
+    justify-content: space-evenly;
+
 }
 
 .Timer_container-time{
     display: flex;
     width: 100%;
-    height: 50%;
     padding: 20px;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    font-size: calc(100px + 2vmin);
+    font-size: calc(50px + 2vmin);
 }
 
 .Timer_title{
@@ -45,9 +46,18 @@
     color: white;
 }
 
-@media(max-width: 800px){
-    .Timer_container{
-        width: 100%;
-        height: 50vh;
-    }
+.Timer_button-tool{
+    background-color: #98dd7f;
+    border: none;
+    outline: none;
+    color: black;
+    display: inline-block;
+    text-align: center;
+
+    width: 100%;
+    padding: 20px;
+}
+
+.Timer_button-tool:hover{
+    background-color: white;
 }

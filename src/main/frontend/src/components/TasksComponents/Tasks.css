@@ -4,7 +4,6 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    font-size: calc(5px + 2vmin);
 
     color: gray;
 
@@ -17,13 +16,18 @@
 
 .Task_button-tool{
     background-color: #98dd7f;
-    color: white;
+    color: gray;
     display: inline-block;
     height: 100%;
     text-align: center;
-    width: 100px;
+    min-width: 150px;
     padding: 20px;
-    margin: 1px;
+    outline: none;
+    border: none;
+}
+
+.Task_button-tool:hover{
+    background-color: #6bd35c;
 }
 
 .Task_tools{
@@ -55,4 +59,9 @@
 
 .Active .Task_button-tool{
     background-color: #6bd35c;
+    color: black !important;
+}
+
+.Active .Task_button-tool:hover{
+    background-color: #98dd7f;
 }

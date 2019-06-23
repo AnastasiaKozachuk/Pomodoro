@@ -12,12 +12,12 @@ export default class Analysis extends Component {
         ]
     };
 
-    createAnalysisItem(name, tt) {
+    createAnalysisItem(name, tt){
         return {
             name: name,
             totalTime: tt
         };
-    }
+    };
 
     renderTable = () => {
         return this.state.analysisData.map(value => {
@@ -33,20 +33,26 @@ export default class Analysis extends Component {
     render() {
 
         return (
-            <div className="container">
+            <div className="analysis-container">
                 <div className="table-background">
-                    <div className="title-analysis">Analysis</div>
+                    <div className="title-analysis">
+                       Analysis
+                    </div>
                 </div>
-                <div className="sub-title">Done tasks :</div>
-                <table>
-                    <tbody>
-                    <tr>
-                        <td>Task name</td>
-                        <td>Total spent time</td>
-                    </tr>
-                    {this.renderTable()}
-                    </tbody>
-                </table>
+                <div className="table-container">
+                    <div className="sub-title">
+                        <h5>Done tasks :</h5>
+                    </div>
+                    <table>
+                        <tbody>
+                        <tr>
+                            <td>Task name</td>
+                            <td>Total spent time</td>
+                        </tr>
+                        {this.renderTable()}
+                        </tbody>
+                    </table>
+                </div>
             </div>
         );
     }

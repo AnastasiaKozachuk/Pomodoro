@@ -6,7 +6,6 @@ import {createStore} from 'redux';
 import {Provider} from 'react-redux';
 import reducer from './reducer/mainReducer';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Header from "./components/Headers/header";
 
 const store = createStore(reducer);
 

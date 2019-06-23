@@ -8,7 +8,7 @@ export default class ItemAddForm extends Component {
     };
 
     OnLabelChange = (event) => {
-
+        this.props.onUpdate(event.target.value);
         this.setState(
             {
                 label: event.target.value
@@ -17,7 +17,7 @@ export default class ItemAddForm extends Component {
 
     };
 
-    SetDefault= (prop) =>{
+    SetDefault = (prop) =>{
         this.setState(
             {
                 label: prop

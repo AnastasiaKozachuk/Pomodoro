@@ -71,27 +71,35 @@ class TaskManager extends Component {
     render() {
 
         return (
-            <div className="TaskManager_container">
-                <div className="TaskManager_create_container">
-                    <h1 className="TaskManager_title">Create Task</h1>
-                    <div>
-                        <input className="Signin-form_input"
-                               onChange={(evt) => this.updateNameValue(evt)}
-                               type="text"
-                               placeholder="Task Name"/>
+            <>
+                <div className="TaskManager_container">
+                    <div className="table-background">
+                        <div className="title_task-manager">
+                            Tasks
+                        </div>
                     </div>
-                    <div>
-                        <input className="Signin-form_input"
-                               onChange={(evt) => this.updateDescription(evt)}
-                               type="textarea"
-                               placeholder="Description"/>
-                    </div>
-                    <div className="TaskManager_button">CREATE</div>
+
+                        <h1 className="TaskManager_title">Create Task</h1>
+                        <div>
+                            <input className="Signin-form_input"
+                                   onChange={(evt) => this.updateNameValue(evt)}
+                                   type="text"
+                                   placeholder="Task Name"/>
+                        </div>
+                        <div>
+                            <input className="Signin-form_input"
+                                   onChange={(evt) => this.updateDescription(evt)}
+                                   type="textarea"
+                                   placeholder="Description"/>
+                        </div>
+                        <button className="TaskManager_button">APPLY</button>
+
                 </div>
-                <div className="Tasks_container">
+                <div className="TaskManager_container-tasks">
                     {this.createTaskItems()}
                 </div>
-            </div>
+            </>
+
         );
     }
 }

@@ -1,25 +1,32 @@
-*{
-    margin: 0;
+.table-background{
+    background-color: #f74f2b;
+    text-align: center;
+    width: 100%;
 }
 
-.table-background{
-    background-color: coral;
-    text-align: center;
+.analysis-container{
+    padding-top: 70px;
 }
 
 .title-analysis{
     text-align: center;
     text-transform: uppercase;
-    font-size: 50px;
+    /*font-size: 50px;*/
     color : white;
     padding-top: 50px;
     padding-bottom: 30px;
+
+}
+
+.table-container{
+    position: relative;
+    width: 100%;
 }
 
 .sub-title{
     text-align: left;
     text-transform: uppercase;
-    font-size: 40px;
+    /*font-size: 40px;*/
     margin: 15px;
 
 }
@@ -31,9 +38,9 @@ table{
 }
 
 td {
-    font-size: 30px;
+    /*font-size: 30px;*/
 }
 
 .td-totaltime{
-    color: coral;
+    color: #f74f2b;
 }

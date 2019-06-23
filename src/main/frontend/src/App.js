@@ -10,6 +10,7 @@ import TaskManager from './components/TasksComponents/TaskManager'
 import Analysis from './components/AnalysisComponents/Analysis'
 import TimerSettings from './components/TimerComponents/TimerSettings'
 import Header from "./components/Headers/header";
+import RegisterForm from "./components/RegisterComponent/RegisterForm";
 
 
 class App extends Component {
@@ -23,7 +24,8 @@ class App extends Component {
             <Router>
                 <Route path="/" component={Home} exact/>
                 <Route path="/sign-in" component={SigninForm}/>
-                {/*<Route path="/dashboard" component={Header} />*/}
+                <Route path="/createAccount" component={RegisterForm}/>
+                <Route path="/dashboard" component={Header} />
                 <Route path="/dashboard/manage-timer" component={TimerSettings}/>
                 <Route path="/dashboard/manage-tasks" component={TaskManager}/>
                 <Route path="/dashboard/pomodoro" component={WorkProcess}/>

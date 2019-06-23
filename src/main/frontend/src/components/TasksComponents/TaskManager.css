@@ -1,45 +1,49 @@
 .TaskManager_container{
-    display: flex;
+    padding-top: 70px;
+    text-align: center;
     width: 100%;
-    height: 100vh;
-    background-color: white;
-    padding: 20px;
-    flex-direction: column;
-    align-items: center;
 }
 
-.Tasks_container{
-    position: fixed;
-    bottom: 0;
-    left: 0;
+.TaskManager_container-tasks{
+    padding: 70px;
+    text-align: center;
     width: 100%;
-    height: 50%;
-    padding: 50px;
-    overflow-y: auto;
-
 }
-.TaskManager_create_container{
-    display: flex;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 50vh;
+
+
+.table-background {
     background-color: #f74f2b;
-    padding: 20px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
+    width: 100%;
 }
+
+.title_task-manager{
+    text-align: center;
+    text-transform: uppercase;
+    /*font-size: 50px;*/
+    color : white;
+    padding-top: 50px;
+    padding-bottom: 30px;
+
+}
+
 .TaskManager_title{
     color: white;
 }
 
 .TaskManager_button{
     background-color: #98dd7f;
+    outline: none;
+    border: none;
     color: white;
     text-align: center;
     width: 300px;
     padding: 10px;
     margin: 1px;
+}
+
+.TaskManager_button:hover, .TaskManager_button:focus{
+    background-color: #75ae5d;
+    outline: none;
+    border: none;
 }
