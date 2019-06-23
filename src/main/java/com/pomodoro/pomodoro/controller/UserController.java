@@ -31,6 +31,7 @@ public class UserController {
 
 
     @PostMapping(value = "/registration")
+    @CrossOrigin
     public ResponseEntity saveUser(@RequestBody User user) {
         User userSaved = userService.saveUser(user);
 
