@@ -84,7 +84,6 @@ class Timer extends Component {
         this.state.running = false;
         localStorage.setItem('running', this.state.running);
         clearInterval(this.interval);
-        document.getElementById("blocker").style.display = 'none';
     };
 
     startTimer = () => {
@@ -97,7 +96,6 @@ class Timer extends Component {
             const date = this.calculateCountdown(endTime);
             date ? this.setState(date) : this.stop();
         }, 1000);
-        document.getElementById("blocker").style.display = 'flex';
     };
 
         blinkTab = function(message) {

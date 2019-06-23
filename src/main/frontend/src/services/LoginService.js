@@ -21,53 +21,20 @@ class LoginService {
         });
     }
 
-    createAccount(data){
-        return axios.post("/registration", {
+    createAccount(data) {
+        return axios.post("http://localhost:8080/user/registration", {
             "login": data.login,
             "firstName": data.firstName,
             "secondName": data.lastName,
             "password": "{noop}" + data.password,
             "email": data.email,
-            "timeOfPomidor":  25,
+            "timeOfPomidor": 25,
             "timeOfSmallBreak": 5,
-            "timeOfBigBreak":  25,
+            "timeOfBigBreak": 25,
             "amountOfPomidors": 14,
-            "amountOfPomidorForBigBreaks" : 4
+            "amountOfPomidorForBigBreaks": 4
         });
-    }
-
-    //delete next two if we dont need roles
-
-
-    createEmployer(data){
-        return axios.post("http://localhost:8080/registration/createEmployer", {
-            "employerLoginEmail": data.loginEmail,
-            "firstName": data.firstName,
-            "secondName": data.secondName,
-            "lastName": data.lastName,
-            "password": "{noop}" + data.password,
-            "jobPosition": data.jobPositionValue,
-            "companyName": data.companyNameValue,
-            "companyWebsite": data.companyWebsiteValue,
-            "skype": data.skypeValue,
-            "mobilePhone": data.phoneNumberValue
-        });
-    }
-
-    createEmployee(data){
-        return axios.post("http://localhost:8080/registration/createEmployee", {
-            "employeeLoginEmail": data.loginEmail,
-            "firstName": data.firstName,
-            "secondName": data.secondName,
-            "lastName": data.lastName,
-            "password": "{noop}" + data.password,
-            "skype": data.skypeValue,
-            "mobilePhone": data.phoneNumberValue,
-            "gitHubLink": data.gitHubValue,
-            "linkedinLink": data.linkedinValue
-        });
-    }
-
+    };
 }
 
 export default LoginService;

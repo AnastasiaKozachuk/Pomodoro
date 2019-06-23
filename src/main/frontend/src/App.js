@@ -30,6 +30,7 @@ class App extends Component {
                 <Route path="/dashboard/manage-tasks" component={TaskManager}/>
                 <Route path="/dashboard/pomodoro" component={WorkProcess}/>
                 <Route path="/dashboard/analysis" component={Analysis}/>
+
             </Router>
         );
     }

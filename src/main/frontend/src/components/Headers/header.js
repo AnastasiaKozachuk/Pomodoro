@@ -23,10 +23,6 @@ class Header extends Component {
     render() {
         return (
             <>
-            <div className="block-header tooltip" id="blocker">
-            <a className="tooltip" tip="This is a link to somewhere cool, and the tooltip gives more info about that cool place...">
-            </a>
-            </div>
             <div className="hdr-Header_container" id="header">
                 <ul className="hdr-Header_menu">
                     <li className="hdr-Header_element">
