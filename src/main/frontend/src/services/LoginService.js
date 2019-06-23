@@ -22,12 +22,17 @@ class LoginService {
     }
 
     createAccount(data){
-        return axios.post("http://localhost:8080/registration/createEmployer", {
+        return axios.post("/registration", {
             "login": data.login,
             "firstName": data.firstName,
             "secondName": data.lastName,
             "password": "{noop}" + data.password,
-            "email": data.email
+            "email": data.email,
+            "timeOfPomidor":  25,
+            "timeOfSmallBreak": 5,
+            "timeOfBigBreak":  25,
+            "amountOfPomidors": 14,
+            "amountOfPomidorForBigBreaks" : 4
         });
     }
 

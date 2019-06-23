@@ -62,16 +62,16 @@ export default class Settings extends Component {
     };
 
     setEvent = () => {
-
         let data = JSON.stringify({
-            duration:  this.state.duration,
-            break_duration: this.state.break_duration,
-            set_size:  this.state.set_size,
-            set_break_duration: this.state.set_break_duration
+            timeOfPomidor:  this.state.duration,
+            timeOfSmallBreak: this.state.break_duration,
+            timeOfBigBreak:  this.state.set_size,
+            amountOfPomidors: this.state.set_break_duration,
+            amountOfPomidorForBigBreaks : 4
         });
 
         //add path here
-        axios.post("http://localhost:8080/timer_settings", data).then(() => {
+        axios.post("updateUser", data).then(() => {
             console.log("Successfully set");
         });
     };

@@ -1,61 +1,49 @@
 import React, {Component} from "react";
 import './Analysis.css';
+import AnalysisService from '../../services/AnalysisService';
+
+import AnalysisTableElement from './AnalysisTableElement'
 
 export default class Analysis extends Component {
 
+    analysisService = new AnalysisService();
 
     state = {
-        analysisData: [
-            this.createAnalysisItem('Task1', 200),
-            this.createAnalysisItem('Task2', 120),
-            this.createAnalysisItem('Task3', 300)
-        ]
-    };
-
-    createAnalysisItem(name, tt){
-        return {
-            name: name,
-            totalTime: tt
-        };
-    };
-
-    renderTable = () => {
-        return this.state.analysisData.map(value => {
-            return (
-                <tr key={value.name}>
-                    <td>{value.name}</td>
-                    <td className="td-totaltime">{value.totalTime}</td>
-                </tr>
-            )
-        })
-    };
+        completedTasks: this.analysisService.getCompletedTasks(),
+        uncompletedTasks: this.analysisService.getUncompletedTasks(),
+        unstartedTasks: this.analysisService.getUnstartedTasks(),
+        startedAndUncompletedTasks: this.analysisService.getStartedAndUncompletedTasks(),
+        pausedTasks: this.analysisService.getPausedTasks()
+    };  
 
     render() {
 
         return (
             <div className="analysis-container">
                 <div className="table-background">
-                    <div className="title-analysis">
-                       Analysis
-                    </div>
+                    <div className="title-analysis">Analysis</div>
                 </div>
                 <div className="table-container">
-                    <div className="sub-title">
-                        <h5>Done tasks :</h5>
-                    </div>
-                    <table>
-                        <tbody>
-                        <tr>
-                            <td>Task name</td>
-                            <td>Total spent time</td>
-                        </tr>
-                        {this.renderTable()}
-                        </tbody>
-                    </table>
+                <div className="sub-title">Completed tasks :</div>  
+                <AnalysisTableElement analysisData={this.state.completedTasks}/>
+              
+                <div className="sub-title">Uncompleted tasks :</div>  
+                <AnalysisTableElement analysisData={this.state.uncompletedTasks}/>
+             
+                <div className="sub-title">Unstarted tasks :</div>  
+                <AnalysisTableElement analysisData={this.state.unstartedTasks}/>
+             
+                <div className="sub-title">Started and uncompleted tasks :</div>  
+                <AnalysisTableElement analysisData={this.state.startedAndUncompletedTasks}/>
+             
+                <div className="sub-title">Paused tasks :</div>  
+                <AnalysisTableElement analysisData={this.state.pausedTasks}/>
                 </div>
             </div>
         );
     }
+
+    
 
 
 }
