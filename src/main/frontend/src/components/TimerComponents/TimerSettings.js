@@ -71,7 +71,7 @@ export default class Settings extends Component {
         });
 
         //add path here
-        axios.post("updateUser", data).then(() => {
+        axios.post("/updateUser", data).then(() => {
             console.log("Successfully set");
         });
     };

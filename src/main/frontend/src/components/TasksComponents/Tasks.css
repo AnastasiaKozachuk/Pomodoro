@@ -34,6 +34,7 @@
     display: inline-block;
     height: 100%;
     text-align: center;
+    width: 33%;
 }
 
 .Task_title{
@@ -41,6 +42,7 @@
     padding: 20px;
     text-align: center;
     height: 100%;
+    width: 33%;
 }
 
 .Task_time-spent{
@@ -48,6 +50,7 @@
     padding: 20px;
     text-align: center;
     height: 100%;
+    width: 33%;
 }
 
 .Active{
