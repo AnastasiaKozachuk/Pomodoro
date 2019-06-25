@@ -1,16 +1,54 @@
 import React, {Component} from 'react';
 //import pomodoroService from "../../services/PomodoroService";
 import connect from "react-redux/es/connect/connect";
-import './Tasks.css';
+import './MTasks.css';
 
-class Tasks extends Component {
-
-    //pomodoroService = new pomodoroService();
+class MTasks extends Component {
 
     state = {
+        title: this.props.title,
+        description: this.props.description
+    };
+
+    OnTitleChange = (event) => {
+        this.setState(
+            {
+                title: event.target.value
+            }
+        )
 
     };
 
+    OnDescriptionChange = (event) => {
+        this.setState(
+            {
+                description: event.target.value
+            }
+        )
+
+    };
+
+
+    SetDefault = (prop) =>{
+        this.setState(
+            {
+                title: prop,
+                description: prop
+            }
+        )
+    };
+
+    updateMTask = () => {
+        console.log("Task is updated!");
+    };
+
+    deleteMTask = () => {
+        console.log("Task is deleted!");
+    };
+
+
+    componentWillMount() {
+    }
 
     componentDidMount() {
         //this.getTimerInfo();
@@ -21,20 +59,33 @@ class Tasks extends Component {
 
     render() {
 
-        const classOfContainer = "Task_container"+ " " + this.props.active;
-
         return (
-            <div className={classOfContainer}>
-                <div className="Task_title">
-                    {this.props.title}
+            <div className="MTask_container Active">
+                <div className="MTask_title">
+
+                        <textarea className="MTask-form_input"
+                               onChange={this.OnTitleChange} value={this.state.title}>
+                        </textarea>
+
                 </div>
-                <div className="Task_tools">
-                    <div className="Task_button-tool">Edit</div>
-                    <div className="Task_button-tool">Delete</div>
+                <div className="MTask_description">
+
+                        <textarea className="MTask-form_input"
+                                  onChange={this.OnDescriptionChange}
+                                  value={this.state.description}>
+                        </textarea>
+
                 </div>
-                <div className="Task_time-spent">
-                    {this.props.performanceTime}
+                <div className="MTask_tools">
+                    <button className="MTask-form_link"
+                            onClick={this.updateMTask}>
+                        Edit
+                    </button>
+                    <button className="MTask-form_danger-link" onClick={this.deleteMTask}>
+                        Delete
+                    </button>
                 </div>
+
             </div>
         );
     }
@@ -44,4 +95,4 @@ const mapStateToProps = (state) => {
     return state;
 };
 
-export default connect(mapStateToProps)(Tasks);
+export default connect(mapStateToProps)(MTasks);

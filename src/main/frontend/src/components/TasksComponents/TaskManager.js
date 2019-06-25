@@ -5,16 +5,38 @@ import Task from '../TasksComponents/MTasks'
 
 class TaskManager extends Component {
 
-    state = {};
+    state = {
+        newTaskName: "",
+        newTaskDescription: "",
+        tasks: []
+    };
 
 
     componentDidMount() {
     }
 
-    getTimerInfo = () => {};
-
     getTasks = () => {
 
+    };
+
+    createNameValue = (event) => {
+        this.setState(
+            {
+                newTaskName: event.target.value
+            }
+        )
+    };
+
+    createDescription = (event) => {
+        this.setState(
+            {
+                newTaskDescription: event.target.value
+            }
+        )
+    };
+
+    createNewTask = () => {
+        console.log("New task created!")
     };
 
     createTaskItems = () => {
@@ -22,8 +44,8 @@ class TaskManager extends Component {
         let tasks = [
             {
                 active: "",
-                title: "My Title 1",
-                description: "Description",
+                title: "Inform about licence renewal",
+                description: "In this task the goal lies in answering the client about the licence renewal",
                 isStarted:"Yes",
                 isPaused: "No",
                 isDone: "No",
@@ -31,8 +53,8 @@ class TaskManager extends Component {
             },
             {
                 active: "",
-                title: "My Title 2",
-                description: "Description",
+                title: "Fix issue",
+                description: "An issue was detected when passing even numbers to the component that needs to be fixed.",
                 isStarted:"Yes",
                 isPaused: "No",
                 isDone: "No",
@@ -81,18 +103,21 @@ class TaskManager extends Component {
 
                         <h1 className="TaskManager_title">Create Task</h1>
                         <div>
-                            <input className="Signin-form_input"
-                                   onChange={(evt) => this.updateNameValue(evt)}
+                            <input className="MTask-form_top-input"
+                                   onChange={this.createNameValue}
                                    type="text"
                                    placeholder="Task Name"/>
                         </div>
                         <div>
-                            <input className="Signin-form_input"
-                                   onChange={(evt) => this.updateDescription(evt)}
-                                   type="textarea"
-                                   placeholder="Description"/>
+                            <textarea className="MTask-form_bottom-input"
+                                   onChange={this.createDescription}
+                                   placeholder="Description">
+                            </textarea>
                         </div>
-                        <button className="TaskManager_button">APPLY</button>
+                        <button className="TaskManager_button"
+                                onClick={this.createNewTask}>
+                            CREATE
+                        </button>
 
                 </div>
                 <div className="TaskManager_container-tasks">

@@ -53,4 +53,5 @@
 
 .set-button:hover{
     background-color: #bf3b20;
+    border: 3px solid #bf3b20;
 }

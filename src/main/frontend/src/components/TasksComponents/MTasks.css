@@ -1,11 +1,10 @@
-.Task_container{
+.MTask_container{
     display: flex;
     width: 100%;
     flex-direction: row;
     align-items: center;
-    justify-content: space-evenly;
     font-size: calc(5px + 2vmin);
-
+    justify-content: space-evenly;
     color: gray;
 
     margin-bottom: 20px;
@@ -15,44 +14,86 @@
     box-shadow: 0 0 0 1px rgb(210, 210, 210);
 }
 
-.Task_button-tool{
+.MTask-form_input{
+    width: 100%;
+    text-decoration: none;
+    outline: none;
+    border: none !important;
+    padding: 10px;
+    color: #6c955a;
+    background-color: white;
+    margin: 10px;
+}
+
+.MTask-form_input:focus, .MTask-form_input:hover{
+    text-decoration: none;
+    outline: none;
+    background-color: white;
+}
+
+.MTask-form_link{
+    outline: none;
+    border: none;
+    background-color: white;
+    color: #6c955a;
+    margin: 10px;
+}
+
+.MTask-form_link:hover, .MTask-form_link:focus{
+    outline: none;
+    border: none;
+    color: #476f32;
+}
+
+.MTask-form_danger-link{
+    outline: none;
+    border: none;
+    background-color: white;
+    color: #a8a8a8;
+    margin: 10px;
+}
+
+.MTask-form_danger-link:hover, .MTask-form_danger-link:focus{
+    outline: none;
+    border: none;
+    color: #984236;
+}
+
+.MTask_button-tool{
     background-color: #98dd7f;
     color: white;
     display: inline-block;
     height: 100%;
-    text-align: center;
-    width: 100px;
     padding: 20px;
     margin: 1px;
 }
 
-.Task_tools{
+.MTask_tools{
     display: inline-block;
-    height: 100%;
-    text-align: center;
-}
-
-.Task_title{
-    display: inline-block;
-    padding: 20px;
-    text-align: center;
     height: 100%;
 }
 
-.Task_time-spent{
+.MTask_title{
     display: inline-block;
     padding: 20px;
-    text-align: center;
     height: 100%;
+    min-width: 200px;
+}
+
+.MTask_description{
+    display: inline-block;
+    padding: 20px;
+    height: 100%;
+    min-width: 400px;
 }
 
 .Active{
     color: black !important;
-    -webkit-box-shadow: 0 0 5px 2px rgba(130,130,130,1);
-    -moz-box-shadow: 0 0 5px 2px rgba(130,130,130,1);
-    box-shadow: 0 0 5px 2px rgba(130,130,130,1);
+    -webkit-box-shadow: 0 0 5px 1px rgb(168, 168, 168);
+    -moz-box-shadow: 0 0 5px 1px rgb(168, 168, 168);
+    box-shadow: 0 0 5px 1px rgb(168, 168, 168);
 }
 
-.Active .Task_button-tool{
+.Active .MTask_button-tool{
     background-color: #6bd35c;
 }

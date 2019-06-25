@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {BrowserRouter as Router, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import './css/App.css';
 
 import Home from './components/HomePage/Home-page'
@@ -11,6 +11,7 @@ import Analysis from './components/AnalysisComponents/Analysis'
 import TimerSettings from './components/TimerComponents/TimerSettings'
 import Header from "./components/Headers/header";
 import RegisterForm from "./components/RegisterComponent/RegisterForm";
+import ErrorMessage from "./components/ErrorMessage/error-message";
 
 
 class App extends Component {
@@ -22,6 +23,7 @@ class App extends Component {
 
         return (
             <Router>
+
                 <Route path="/" component={Home} exact/>
                 <Route path="/sign-in" component={SigninForm}/>
                 <Route path="/createAccount" component={RegisterForm}/>

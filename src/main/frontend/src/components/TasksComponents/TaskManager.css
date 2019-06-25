@@ -10,6 +10,38 @@
     width: 100%;
 }
 
+.MTask-form_top-input{
+    outline: none;
+    border: 2px solid gray;
+    border-bottom: none;
+    padding: 10px;
+    color: #6c955a;
+    background-color: white;
+    width: 300px;
+}
+
+.MTask-form_top-input:focus, .Task-form_top-input:hover{
+    text-decoration: none;
+    outline: none;
+    background-color: white;
+}
+
+.MTask-form_bottom-input{
+    text-decoration: dashed;
+    outline: none;
+    border: 2px solid gray;
+    padding: 10px;
+    color: #6c955a;
+    background-color: white;
+    width: 300px;
+}
+
+.MTask-form_bottom-input:focus, .Task-form_bottom-input:hover{
+    text-decoration: none;
+    outline: none;
+    background-color: white;
+}
+
 
 .table-background {
     background-color: #f74f2b;
@@ -39,7 +71,6 @@
     text-align: center;
     width: 300px;
     padding: 10px;
-    margin: 1px;
 }
 
 .TaskManager_button:hover, .TaskManager_button:focus{
