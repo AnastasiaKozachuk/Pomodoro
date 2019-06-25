@@ -25,44 +25,26 @@ class WorkProcess extends Component {
     createTaskItems = () => {
         //test data
         let tasks = [
+            
             {
                 active: "Active",
-                title: "My Title 1",
-                description: "Description",
+                title: "Fix issue",
+                description: "An issue was detected when passing even numbers to the component that needs to be fixed",
                 isStarted:"Yes",
                 isPaused: "No",
                 isDone: "No",
-                performanceTime: "00:00:00"
+                performanceTime: "00:00:15"
             },
             {
                 active: "",
-                title: "My Title 2",
-                description: "Description",
-                isStarted:"Yes",
+                title: "Inform about licence renewal",
+                description: "In this task the goal lies in answering the client about the licence renewal",
+                isStarted:"No",
                 isPaused: "No",
                 isDone: "No",
-                performanceTime: "00:00:30"
+                performanceTime: "00:00:00"
             }
-            ,
-            {
-                active: "",
-                title: "My Title 2",
-                description: "Description",
-                isStarted:"Yes",
-                isPaused: "No",
-                isDone: "No",
-                performanceTime: "00:00:30"
-            }
-            ,
-            {
-                active: "",
-                title: "My Title 2",
-                description: "Description",
-                isStarted:"Yes",
-                isPaused: "No",
-                isDone: "No",
-                performanceTime: "00:00:30"
-            }
+           
         ];
 
         if (tasks.length === 0) {
