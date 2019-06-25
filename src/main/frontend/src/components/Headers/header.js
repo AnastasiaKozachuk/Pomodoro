@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import './header.css';
-import logo from '../images/resfeber_logo.svg';
 import {withRouter, Link} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {bindActionCreators} from "redux";
@@ -10,7 +9,6 @@ class Header extends Component {
 
 
     logOutEvent = () => {
-
 
         this.props.save('', '', false,'');
 

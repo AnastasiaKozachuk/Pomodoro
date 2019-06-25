@@ -3,11 +3,8 @@ import connect from "react-redux/es/connect/connect";
 import './WorkProcess.css';
 import Task from '../TasksComponents/Tasks'
 import Timer from '../TimerComponents/Timer'
-//import pomodoroService from "../../services/PomodoroService";
 
 class WorkProcess extends Component {
-
-    //pomodoroService = new pomodoroService();
 
     state = {
         timeOfPomidor: 25,
@@ -17,41 +14,9 @@ class WorkProcess extends Component {
         amountOfPomidorForBigBreaks: 4
     };
 
-
-    componentDidMount() {
-        //this.getTimerInfo();
-    }
-
-    getTimerInfo = () => {};
-
-    getTasks = () => {
-
-    };
-
     createTaskItems = () => {
-        //test data
-        let tasks = [
-            
-            {
-                active: "Active",
-                title: "Fix issue",
-                description: "An issue was detected when passing even numbers to the component that needs to be fixed",
-                isStarted:"Yes",
-                isPaused: "No",
-                isDone: "No",
-                performanceTime: "00:00:15"
-            },
-            {
-                active: "",
-                title: "Inform about licence renewal",
-                description: "In this task the goal lies in answering the client about the licence renewal",
-                isStarted:"No",
-                isPaused: "No",
-                isDone: "No",
-                performanceTime: "00:00:00"
-            }
-           
-        ];
+        
+        let tasks = [];
 
         if (tasks.length === 0) {
             return (
@@ -78,7 +43,6 @@ class WorkProcess extends Component {
             />
         );
     };
-
 
 
     render() {

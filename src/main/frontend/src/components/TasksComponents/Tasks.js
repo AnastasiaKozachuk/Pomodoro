@@ -8,16 +8,10 @@ class Tasks extends Component {
     constructor(props) {
         super(props);
 
-        this.state = {
-
-        };
+        this.state = {};
 
         this.activateTask = this.activateTask.bind(this);
         this.markDone = this.markDone.bind(this);
-    }
-
-
-    componentDidMount() {
     }
 
     activateTask = (event) =>{

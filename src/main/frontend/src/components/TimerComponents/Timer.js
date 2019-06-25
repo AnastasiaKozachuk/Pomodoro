@@ -41,11 +41,6 @@ class Timer extends Component {
 
     }
 
-    componentWillUnmount() {
-        //Add time to server
-        //this.stop();
-    }
-
     componentWillUpdate(nextProps, nextState) {
         localStorage.setItem('endTime', nextState.date);
         localStorage.setItem('running', nextState.running);

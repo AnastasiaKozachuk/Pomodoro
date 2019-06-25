@@ -40,27 +40,7 @@ class TaskManager extends Component {
     };
 
     createTaskItems = () => {
-        //test data
-        let tasks = [
-            {
-                active: "",
-                title: "Inform about licence renewal",
-                description: "In this task the goal lies in answering the client about the licence renewal",
-                isStarted:"Yes",
-                isPaused: "No",
-                isDone: "No",
-                performanceTime: "00:00:00"
-            },
-            {
-                active: "",
-                title: "Fix issue",
-                description: "An issue was detected when passing even numbers to the component that needs to be fixed.",
-                isStarted:"Yes",
-                isPaused: "No",
-                isDone: "No",
-                performanceTime: "00:00:30"
-            }
-        ];
+        let tasks = [];
 
         if (tasks.length === 0) {
             return (

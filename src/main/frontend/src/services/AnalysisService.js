@@ -5,58 +5,7 @@ class AnalysisService {
   getUser(){
       return localStorage.getItem('username');
   }
-  testData = [
-  /*  {
-        "taskTitle": "Write an essey",
-        "taskDescription": "For english classes",
-        "creationDate" : "25.06.2019",
-        "isStarted":false,
-        "isPaused":false,
-        "isFinished":false,
-        "performanceTime": 0,
-        "userLogin":"john_smith83"
-    },
-    {
-        "taskTitle": "Clean up the apartment",
-        "taskDescription": "",
-        "creationDate" : "25.06.2019",
-        "isStarted":true,
-        "isPaused":false,
-        "isFinished":false,
-        "performanceTime": 15,        
-        "userLogin":"john_smith83"
-    },
-    {
-        "taskTitle": "Make tasks for exams",
-        "taskDescription": "Math,Physics",
-        "creationDate" : "25.06.2019",
-        "isStarted":true,
-        "isPaused":true,
-        "isFinished":false,
-        "performanceTime": 120,
-        "userLogin":"john_smith83"
-    }*/
-    {
-        "taskTitle": "Inform about licence renewal",
-        "taskDescription": "In this task the goal lies in answering the client about the licence renewal",
-        "creationDate" : "25.06.2019",
-        "isStarted":false,
-        "isPaused":false,
-        "isFinished":false,
-        "performanceTime": 0,
-        "userLogin":"john_smith83"
-    },
-    {
-        "taskTitle": "Fix issue",
-        "taskDescription": "An issue was detected when passing even numbers to the component that needs to be fixed",
-        "creationDate" : "25.06.2019",
-        "isStarted":true,
-        "isPaused":false,
-        "isFinished":false,
-        "performanceTime": 15,        
-        "userLogin":"john_smith83"
-    }
-]
+  testData = []
 
   getUncompletedTasks() {
 

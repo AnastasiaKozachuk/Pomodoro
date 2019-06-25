@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-//import pomodoroService from "../../services/PomodoroService";
 import connect from "react-redux/es/connect/connect";
 import './MTasks.css';
 
@@ -45,17 +44,6 @@ class MTasks extends Component {
     deleteMTask = () => {
         console.log("Task is deleted!");
     };
-
-
-    componentWillMount() {
-    }
-
-    componentDidMount() {
-        //this.getTimerInfo();
-    }
-
-    getTimerInfo = () => {};
-
 
     render() {
 
