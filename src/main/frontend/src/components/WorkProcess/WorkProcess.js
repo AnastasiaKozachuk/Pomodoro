@@ -9,7 +9,13 @@ class WorkProcess extends Component {
 
     //pomodoroService = new pomodoroService();
 
-    state = {};
+    state = {
+        timeOfPomidor: 25,
+        timeOfSmallBreak: 5,
+        timeOfBigBreak: 30,
+        amountOfPomidors: 20,
+        amountOfPomidorForBigBreaks: 4
+    };
 
 
     componentDidMount() {
@@ -98,7 +104,12 @@ class WorkProcess extends Component {
         return (
             <div className="WorkProcess_container">
                 <div className="Timer_container">
-                    <Timer/>
+                    <Timer
+                        timeOfPomidor={this.state.timeOfPomidor}
+                        timeOfSmallBreak={this.state.timeOfSmallBreak}
+                        timeOfBigBreak={this.state.timeOfBigBreak}
+                        amountOfPomidors={this.state.amountOfPomidors}
+                        amountOfPomidorForBigBreaks={this.state.amountOfPomidorForBigBreaks}/>
                 </div>
                 <div className="Tasks_container">
                     {this.createTaskItems()}

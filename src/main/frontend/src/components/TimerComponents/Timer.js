@@ -11,7 +11,13 @@ class Timer extends Component {
             running: false,
             minutes: 0,
             seconds: 0,
-            date: new Date().setMinutes(new Date().getMinutes()+25)
+            isWork: false,
+            pomodors: 0,
+            timeOfPomidor: this.props.timeOfPomidor,
+            timeOfSmallBreak: this.props.timeOfSmallBreak,
+            timeOfBigBreak: this.props.timeOfBigBreak,
+            amountOfPomidors: this.props.amountOfPomidors,
+            amountOfPomidorForBigBreaks: this.props.amountOfPomidorForBigBreaks
         };
 
         this.startTimer = this.startTimer.bind(this);
@@ -92,7 +98,7 @@ class Timer extends Component {
         // update every second
         this.interval = setInterval(() => {
             const today = new Date();
-            const endTime = (this.state.date)?this.state.date:today.setMinutes(today.getMinutes()+25);
+            const endTime = (this.state.date)?this.state.date:today.setMinutes(today.getMinutes()+this.state.timeOfPomidor);
             const date = this.calculateCountdown(endTime);
             date ? this.setState(date) : this.stop();
         }, 1000);

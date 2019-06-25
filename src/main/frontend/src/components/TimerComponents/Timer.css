@@ -58,6 +58,8 @@
     padding: 20px;
 }
 
-.Timer_button-tool:hover{
+.Timer_button-tool:hover, .Timer_button-tool:focus{
     background-color: white;
+    border: none;
+    outline: none;
 }
